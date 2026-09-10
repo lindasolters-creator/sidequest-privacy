@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — SideQuest</title>
+<meta name="description" content="Official Privacy Policy for SideQuest, the real-world quest app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#0B0E12;
+    --ink-soft:#2B323C;
+    --blue:#1F6FEB;
+    --blue-deep:#143F91;
+    --blue-pale:#EAF1FE;
+    --paper:#FBFBFA;
+    --panel:#F2F4F7;
+    --line:#E1E4E9;
+    --muted:#5B6472;
+    --radius:10px;
+    --content-w:740px;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation:none !important; transition:none !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink-soft);
+    font-family:'Inter', system-ui, -apple-system, sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', system-ui, sans-serif;
+    color:var(--ink);
+    font-weight:600;
+    line-height:1.18;
+    letter-spacing:-0.01em;
+  }
+
+  a{ color:var(--blue-deep); }
+  a:hover{ color:var(--blue); }
+
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:3px solid var(--blue);
+    outline-offset:2px;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  /* ---------- Skip link ---------- */
+  .skip-link{
+    position:absolute;
+    left:-999px;
+    top:auto;
+    background:var(--ink);
+    color:#fff;
+    padding:10px 16px;
+    border-radius:6px;
+    z-index:200;
+  }
+  .skip-link:focus{
+    left:12px;
+    top:12px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(251,251,250,0.92);
+    backdrop-filter:saturate(140%) blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .header-inner{
+    max-width:1040px;
+    margin:0 auto;
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:var(--ink);
+  }
+
+  .brand-mark{
+    width:34px;
+    height:34px;
+    border-radius:8px;
+    background:var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    flex:none;
+  }
+  .brand-mark::after{
+    content:"";
+    position:absolute;
+    width:18px; height:18px;
+    right:-6px; top:-6px;
+    background:var(--blue);
+    transform:rotate(45deg);
+  }
+  .brand-word{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:-0.01em;
+  }
+  .brand-word b{ color:var(--blue); font-weight:700; }
+
+  nav.primary-nav ul{
+    display:flex;
+    gap:22px;
+    list-style:none;
+    margin:0; padding:0;
+  }
+  nav.primary-nav a{
+    font-size:0.92rem;
+    font-weight:500;
+    text-decoration:none;
+    color:var(--ink-soft);
+  }
+  nav.primary-nav a:hover{ color:var(--blue-deep); }
+
+  .mobile-nav{ display:none; }
+
+  @media (max-width: 720px){
+    nav.primary-nav{ display:none; }
+    .mobile-nav{
+      display:block;
+      position:relative;
+    }
+    .mobile-nav summary{
+      list-style:none;
+      cursor:pointer;
+      border:1px solid var(--line);
+      background:var(--panel);
+      border-radius:8px;
+      padding:8px 14px;
+      font-size:0.9rem;
+      font-weight:600;
+      color:var(--ink);
+    }
+    .mobile-nav summary::-webkit-details-marker{ display:none; }
+    .mobile-nav[open] summary{ border-color:var(--blue); }
+    .mobile-nav ul{
+      list-style:none;
+      margin:8px 0 0;
+      padding:10px;
+      position:absolute;
+      right:0;
+      top:100%;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:10px;
+      box-shadow:0 8px 24px rgba(11,14,18,0.10);
+      min-width:220px;
+      max-height:70vh;
+      overflow-y:auto;
+    }
+    .mobile-nav li{ margin:0; }
+    .mobile-nav a{
+      display:block;
+      padding:8px 10px;
+      border-radius:6px;
+      text-decoration:none;
+      color:var(--ink-soft);
+      font-size:0.92rem;
+    }
+    .mobile-nav a:hover{ background:var(--panel); }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    right:-8%;
+    top:-14%;
+    width:640px;
+    height:640px;
+    background-image:url('sidequest-logo.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    opacity:0.05;
+    transform:rotate(8deg);
+    pointer-events:none;
+  }
+  @media (max-width:720px){
+    .hero::before{
+      width:420px; height:420px;
+      right:-18%; top:-10%;
+      opacity:0.06;
+    }
+  }
+
+  .hero-inner{
+    position:relative;
+    max-width:1040px;
+    margin:0 auto;
+    padding:64px 24px 52px;
+  }
+
+  .eyebrow-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--blue-deep);
+    background:var(--blue-pale);
+    border-radius:999px;
+    padding:6px 14px;
+    margin-bottom:18px;
+  }
+  .eyebrow-tag .dot{
+    width:6px; height:6px; border-radius:50%;
+    background:var(--blue);
+    flex:none;
+  }
+
+  .hero h1{
+    font-size:clamp(2rem, 5vw, 2.85rem);
+    margin:0 0 12px;
+    max-width:14ch;
+  }
+
+  .hero p.lede{
+    max-width:60ch;
+    font-size:1.06rem;
+    color:var(--muted);
+    margin:0 0 6px;
+  }
+
+  .hero .meta-line{
+    margin-top:22px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 22px;
+    font-size:0.88rem;
+    color:var(--muted);
+  }
+  .hero .meta-line strong{ color:var(--ink-soft); font-weight:600; }
+
+  .official-strip{
+    background:var(--ink);
+    color:#fff;
+  }
+  .official-strip .inner{
+    max-width:1040px;
+    margin:0 auto;
+    padding:12px 24px;
+    font-size:0.86rem;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#D7DEE9;
+  }
+  .official-strip strong{ color:#fff; }
+
+  /* ---------- Layout ---------- */
+  main{
+    max-width:1040px;
+    margin:0 auto;
+    padding:48px 24px 20px;
+    display:grid;
+    grid-template-columns: 250px 1fr;
+    gap:48px;
+    align-items:start;
+  }
+
+  @media (max-width:840px){
+    main{ grid-template-columns:1fr; gap:28px; }
+  }
+
+  /* ---------- TOC ---------- */
+  aside.toc{
+    position:sticky;
+    top:84px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+  }
+  @media (max-width:840px){
+    aside.toc{ position:static; }
+  }
+  aside.toc h2{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--muted);
+    margin:0 0 14px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+  }
+  aside.toc ol{
+    list-style:none;
+    margin:0; padding:0;
+    counter-reset:waypoint;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+  aside.toc li{ counter-increment:waypoint; }
+  aside.toc a{
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+    text-decoration:none;
+    color:var(--ink-soft);
+    font-size:0.89rem;
+    padding:6px 4px;
+    border-radius:6px;
+  }
+  aside.toc a:hover{ background:#fff; color:var(--blue-deep); }
+  aside.toc a::before{
+    content:counter(waypoint, decimal-leading-zero);
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.76rem;
+    color:var(--blue);
+    font-weight:600;
+    flex:none;
+  }
+
+  /* ---------- Article ---------- */
+  article section{
+    padding-bottom:40px;
+    margin-bottom:40px;
+    border-bottom:1px solid var(--line);
+    scroll-margin-top:84px;
+  }
+  article section:last-of-type{
+    border-bottom:none;
+  }
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:14px;
+  }
+  .section-num{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.95rem;
+    font-weight:600;
+    color:var(--blue);
+    flex:none;
+  }
+  article h2{
+    font-size:1.32rem;
+    margin:0;
+  }
+  article h3{
+    font-size:1.02rem;
+    margin:26px 0 8px;
+    color:var(--ink);
+  }
+  article p{ margin:0 0 14px; max-width:70ch; }
+  article ul{ margin:0 0 14px; padding-left:22px; }
+  article ul li{ margin-bottom:8px; max-width:66ch; }
+  article ul li::marker{ color:var(--blue); }
+
+  .subtle-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    margin:0 0 16px;
+    font-size:0.94rem;
+    color:var(--ink-soft);
+  }
+
+  .placeholder{
+    background:#FFF3D6;
+    border:1px solid #E9C875;
+    color:#6B4E00;
+    padding:2px 8px;
+    border-radius:5px;
+    font-family:ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size:0.86em;
+    font-weight:600;
+    white-space:nowrap;
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site{
+    border-top:1px solid var(--line);
+    background:var(--panel);
+    margin-top:20px;
+  }
+  .footer-inner{
+    max-width:1040px;
+    margin:0 auto;
+    padding:36px 24px 48px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:18px;
+  }
+  .footer-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .footer-tagline{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.86rem;
+    color:var(--muted);
+    letter-spacing:0.02em;
+  }
+  footer.site p{
+    font-size:0.82rem;
+    color:var(--muted);
+    margin:0 0 6px;
+  }
+
+  /* ---------- Back to top ---------- */
+  .back-to-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:120;
+    background:var(--ink);
+    color:#fff;
+    text-decoration:none;
+    font-size:0.82rem;
+    font-weight:600;
+    padding:11px 16px;
+    border-radius:999px;
+    box-shadow:0 6px 18px rgba(11,14,18,0.25);
+    display:flex;
+    align-items:center;
+    gap:7px;
+  }
+  .back-to-top:hover{ background:var(--blue-deep); color:#fff; }
+  .back-to-top .arrow{ font-family:'Space Grotesk', sans-serif; }
+
+  #top{ scroll-margin-top:0; }
+
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<span id="top"></span>
+
+<header class="site">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="SideQuest — back to top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">Side<b>Quest</b></span>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#information-we-collect">Data We Collect</a></li>
+        <li><a href="#account-deletion">Delete Data</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <details class="mobile-nav">
+      <summary>Menu</summary>
+      <ul>
+        <li><a href="#about">About SideQuest</a></li>
+        <li><a href="#information-we-collect">Information We Collect</a></li>
+        <li><a href="#how-we-use">How We Use Information</a></li>
+        <li><a href="#ai-verification">AI &amp; Automated Verification</a></li>
+        <li><a href="#how-we-share">How We Share Information</a></li>
+        <li><a href="#data-security">Data Security</a></li>
+        <li><a href="#data-retention">Data Retention</a></li>
+        <li><a href="#account-deletion">Account &amp; Data Deletion</a></li>
+        <li><a href="#childrens-privacy">Children's Privacy</a></li>
+        <li><a href="#location-permissions">Location Permissions</a></li>
+        <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#your-rights">Your Privacy Rights</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+
+<div class="official-strip">
+  <div class="inner">
+    <span aria-hidden="true">✓</span>
+    <span>This page is the <strong>official Privacy Policy</strong> for the SideQuest Android app.</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow-tag"><span class="dot" aria-hidden="true"></span>Privacy Policy</span>
+    <h1>How SideQuest handles your information</h1>
+    <p class="lede">SideQuest turns your surroundings into real-world quests. This policy explains, in plain language, what information we collect, why we collect it, and the choices you have.</p>
+    <div class="meta-line">
+      <span><strong>App:</strong> SideQuest — Make Today Interesting.</span>
+      <span><strong>Package:</strong> com.anexis.sidequest</span>
+      <span><strong>Last updated:</strong> September 10, 2026</span>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <aside class="toc" aria-label="Table of contents">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#about">About SideQuest</a></li>
+      <li><a href="#information-we-collect">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Information</a></li>
+      <li><a href="#ai-verification">AI &amp; Automated Verification</a></li>
+      <li><a href="#how-we-share">How We Share Information</a></li>
+      <li><a href="#data-security">Data Security</a></li>
+      <li><a href="#data-retention">Data Retention</a></li>
+      <li><a href="#account-deletion">Account &amp; Data Deletion</a></li>
+      <li><a href="#childrens-privacy">Children's Privacy</a></li>
+      <li><a href="#location-permissions">Location Permissions</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#your-rights">Your Privacy Rights</a></li>
+    </ol>
+  </aside>
+
+  <article>
+
+    <section id="about">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>About SideQuest</h2>
+      </div>
+      <p>SideQuest ("SideQuest," "we," "us," or "our") is an Android app that turns everyday surroundings into real-world quests. We help users discover nearby quests, complete them, and earn XP and in-app rewards for doing so.</p>
+      <p>SideQuest is not a government, financial, health, news, or educational app. It is a general-audience activity and discovery app intended for teenagers and adults.</p>
+      <p>This Privacy Policy explains what information we collect through the SideQuest app (package name <code>com.anexis.sidequest</code>), how we use it, who we share it with, and the choices available to you.</p>
+    </section>
+
+    <section id="information-we-collect">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Information We Collect</h2>
+      </div>
+      <p>We collect the categories of information described below. We only collect what we need to run SideQuest's core features: account creation, quest discovery, quest completion, and rewards.</p>
+
+      <h3>Account information</h3>
+      <p>When you create a SideQuest account, we collect information such as your username, email address, password (stored in encrypted form), and any profile details you choose to add.</p>
+
+      <h3>Location information</h3>
+      <p>SideQuest can use your device's location to find quests near you and to check your proximity to a quest location when you attempt to complete it. We do not publicly display a user's precise current location to other users.</p>
+
+      <h3>Quest/activity information</h3>
+      <p>We store information about the quests you view, start, and complete, along with related progress data such as XP earned, rewards unlocked, streaks, and completion history.</p>
+
+      <h3>Photos and proof submissions</h3>
+      <p>When a quest requires photo proof, we collect the photo you submit. Submitted photos are sent to our servers so that the quest can be verified.</p>
+
+      <h3>Device and technical information</h3>
+      <p>We collect standard technical information such as device type, operating system version, app version, crash logs, and general diagnostic data that helps us keep SideQuest working correctly.</p>
+    </section>
+
+    <section id="how-we-use">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>How We Use Information</h2>
+      </div>
+      <p>We use the information described above to:</p>
+      <ul>
+        <li>Create and maintain your SideQuest account.</li>
+        <li>Show you quests that are nearby or relevant to you.</li>
+        <li>Determine your proximity to a quest location so the app can confirm you're in the right place.</li>
+        <li>Verify photo proof submitted for quest completion.</li>
+        <li>Track and store your quest progress, XP, and in-app rewards.</li>
+        <li>Load and update quests and campaigns from our online services.</li>
+        <li>Maintain, secure, and improve the app, including diagnosing crashes and technical issues.</li>
+        <li>Communicate with you about your account or your quest activity when necessary.</li>
+      </ul>
+    </section>
+
+    <section id="ai-verification">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2>AI and Automated Verification</h2>
+      </div>
+      <p>When you submit a photo as proof of completing a quest, that photo may be sent to our servers for automated AI verification. Our AI verification system reviews the submitted photo to determine whether it satisfies the specific requirements of that quest.</p>
+      <p>This automated process is used to support quest completion and reward decisions. Photos submitted for verification are handled as described in this policy, including the sections on Data Security and Data Retention below.</p>
+    </section>
+
+    <section id="how-we-share">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2>How We Share Information</h2>
+      </div>
+      <p>SideQuest does not currently sell users' personal information.</p>
+      <p>We may share information with service providers who help us operate SideQuest, such as hosting our servers, storing data, and running the automated verification systems described above. These providers only receive the information needed to perform their function for us.</p>
+      <p>We may also share information if required to do so by law, or to protect the rights, safety, and security of SideQuest, our users, or the public.</p>
+    </section>
+
+    <section id="data-security">
+      <div class="section-head">
+        <span class="section-num">06</span>
+        <h2>Data Security</h2>
+      </div>
+      <p>We take reasonable technical and organizational measures designed to protect the information we collect from loss, misuse, and unauthorized access. This includes measures such as encrypted storage of account credentials and access controls on our systems.</p>
+      <p>No method of transmission or storage is completely secure, and we cannot guarantee absolute security. If you believe your account has been compromised, please contact us using the details in the Contact Us section.</p>
+    </section>
+
+    <section id="data-retention">
+      <div class="section-head">
+        <span class="section-num">07</span>
+        <h2>Data Retention</h2>
+      </div>
+      <p>We retain account information, quest and progress data, and photo submissions for as long as your account remains active, or as needed to provide SideQuest's features to you.</p>
+      <p>If you delete your account, we will delete or de-identify your personal information within a reasonable period, except where we are required to retain certain information for legal, security, or fraud-prevention purposes.</p>
+    </section>
+
+    <section id="account-deletion">
+      <div class="section-head">
+        <span class="section-num">08</span>
+        <h2>Account and Data Deletion</h2>
+      </div>
+      <p>You can request deletion of your SideQuest account and associated personal information at any time by contacting us at <span class="placeholder">YOUR_REAL_SIDEQUEST_EMAIL_HERE</span>.</p>
+      <p>Once we receive and verify your request, we will delete your account information, quest and progress history, and any submitted photos, except where retention is required by law or for legitimate security purposes.</p>
+    </section>
+
+    <section id="childrens-privacy">
+      <div class="section-head">
+        <span class="section-num">09</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>SideQuest is intended for teenagers and adults. It is not specifically directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
+      <p>If you believe a child under 13 has provided us with personal information, please contact us at <span class="placeholder">YOUR_REAL_SIDEQUEST_EMAIL_HERE</span> so we can review and, if appropriate, delete that information.</p>
+    </section>
+
+    <section id="location-permissions">
+      <div class="section-head">
+        <span class="section-num">10</span>
+        <h2>Location Permissions</h2>
+      </div>
+      <p>SideQuest requests location permission so it can show you quests near your current area and check whether you're close enough to a quest location to complete it. You can grant, deny, or revoke this permission at any time through your device's system settings.</p>
+      <p>If location access is denied or revoked, some features of SideQuest — such as finding nearby quests or confirming proximity for completion — may not work as intended.</p>
+    </section>
+
+    <section id="third-party">
+      <div class="section-head">
+        <span class="section-num">11</span>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>SideQuest relies on online services to load and update quests, campaigns, and app content, and to support features such as photo storage and AI verification. These service providers process data on our behalf and are only given the information necessary to provide their service to SideQuest.</p>
+      <p>This policy covers SideQuest's own data practices. If a third-party service linked from within the app has its own privacy policy, that policy governs how that third party handles your information.</p>
+    </section>
+
+    <section id="changes">
+      <div class="section-head">
+        <span class="section-num">12</span>
+        <h2>Changes to This Privacy Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time, for example to reflect changes to SideQuest's features or for legal or regulatory reasons. When we make changes, we will update the "Last updated" date at the top of this page.</p>
+      <p>We encourage you to review this page periodically to stay informed about how we handle your information.</p>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <span class="section-num">13</span>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or how SideQuest handles your information, please contact us at:</p>
+      <div class="subtle-card">
+        Email: <span class="placeholder">YOUR_REAL_SIDEQUEST_EMAIL_HERE</span>
+      </div>
+      <p>Replace the placeholder above with a real, monitored contact email before publishing this page.</p>
+    </section>
+
+    <section id="your-rights">
+      <div class="section-head">
+        <span class="section-num">14</span>
+        <h2>Your Privacy Rights</h2>
+      </div>
+      <p>Depending on where you live, you may have rights regarding your personal information, which can include the right to:</p>
+      <ul>
+        <li>Access the personal information we hold about you.</li>
+        <li>Request correction of inaccurate information.</li>
+        <li>Request deletion of your account and personal information.</li>
+        <li>Withdraw location permission at any time through your device settings.</li>
+        <li>Ask how your information is used and shared.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <span class="placeholder">YOUR_REAL_SIDEQUEST_EMAIL_HERE</span>. We will respond to verified requests within a reasonable timeframe.</p>
+    </section>
+
+  </article>
+
+</main>
+
+<footer class="site">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true" style="width:28px;height:28px;"></span>
+        <span class="footer-tagline">Make Today Interesting.</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#top" style="font-size:0.85rem; font-weight:600; text-decoration:none;">Back to top ↑</a>
+      </nav>
+    </div>
+    <p>SideQuest · Package name: com.anexis.sidequest</p>
+    <p>This is the official Privacy Policy for the SideQuest Android application. Last updated September 10, 2026.</p>
+  </div>
+</footer>
+
+<a href="#top" class="back-to-top" aria-label="Back to top">
+  <span class="arrow" aria-hidden="true">↑</span> Top
+</a>
+
+</body>
+</html>
